@@ -8,7 +8,7 @@ const Users = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    const fetchAllRecipes = () => {
+    const fetchAllUsers = () => {
       axios
         .get("https://jsonplaceholder.typicode.com/users")
         .then(function (response) {
@@ -19,7 +19,7 @@ const Users = () => {
           console.log(error);
         });
     };
-    fetchAllRecipes();
+    fetchAllUsers();
   }, []);
 
   const handleOnInputChange = (event) => {
